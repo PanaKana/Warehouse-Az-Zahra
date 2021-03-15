@@ -69,7 +69,9 @@
                         <h6 class="collapse-header">Cek Stok:</h6>
                         <a class="collapse-item" href="/warehouse">Stok Gudang</a>
                         <a class="collapse-item" href="/shop">Stok Toko</a>
-                        <a class="collapse-item" href="">Semua Toko</a>
+                        <a class="collapse-item" href="/instock">Penerimaan Barang</a>
+                        <a class="collapse-item" href="/mutasi">Mutasi Stok</a>
+                        <a class="collapse-item" href="">Semua Stok</a>
                     </div>
                 </div>
             </li>
@@ -243,6 +245,8 @@
 
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
@@ -260,6 +264,8 @@
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
+
+    @yield('script')
 
 </body>
 

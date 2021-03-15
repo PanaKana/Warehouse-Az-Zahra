@@ -20,3 +20,7 @@ Route::get('/shop', [AdminController::class, 'cekstoktoko']);
 Route::get('/warehouse', [AdminController::class, 'cekstokgudang']);
 
 Route::get('/stock', [AdminController::class, 'cekallstok']);
+
+Route::get('/mutasi', [AdminController::class, 'cekmutasi']);
+
+Route::get('/instock', [AdminController::class, 'cekbarangmasuk']);

@@ -63,4 +63,14 @@ class AdminController extends Controller
     {
         return view('warehouse.stocktoko');
     }
+
+    public function cekmutasi()
+    {
+        return view('warehouse.mutasi');
+    }
+
+    public function cekbarangmasuk()
+    {
+        return view('warehouse.penerimaan');
+    }
 }
