@@ -24,3 +24,7 @@ Route::get('/stock', [AdminController::class, 'cekallstok']);
 Route::get('/mutasi', [AdminController::class, 'cekmutasi']);
 
 Route::get('/instock', [AdminController::class, 'cekbarangmasuk']);
+
+Route::post('/instock/input', [AdminController::class, 'inputstokgudang']);
+
+Route::post('/mutasi/input', [AdminController::class, 'mutasistok']);

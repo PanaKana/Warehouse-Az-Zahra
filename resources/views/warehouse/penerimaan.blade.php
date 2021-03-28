@@ -16,7 +16,8 @@
                 <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
             </div>
             <div class="modal-body">
-                <form action="">
+                <form method="POST" action="/instock/input">
+                    {{ csrf_field() }}
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Kode Stok</label>
                         <input class="form-control" id="exampleFormControlInput1" type="text" id="kodestok" name="kodestok">
@@ -25,15 +26,36 @@
                         <label for="exampleFormControlInput1">Nama Barang</label>
                         <input class="form-control" id="exampleFormControlInput1" type="text" id="namabarang" name="namabarang">
                     </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Nomor Barcode</label>
+                        <input class="form-control" id="exampleFormControlInput1" type="text" id="barcode" name="barcode">
+                    </div>
                     <div class="row">
-                        <div class="form-group col-md-6 col-xs-6">
+                        <div class="form-group col-md-6 col-sm-6 col-xs-6">
                             <label for="exampleFormControlInput1">Tanggal Expired</label><br>
                             <input type="date" id="expired" name="expired" placeholder="Silahkan Isi Tanggal Expired">
                         </div>
-                        <div class="form-group col-md-6 col-xs-6">
+                        <div class="form-group col-md-6 col-sm-6 col-xs-6">
                             <label for="exampleFormControlInput1">Jumlah Stok</label><br>
                             <input type="Number" id="jumlah" name="jumlah" placeholder="Silahkan Isi Jumlah Stok">
                         </div>  
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Ukuran</label>
+                        <div class="row col-md-12">
+                            <div class="col-md-9">
+                                <input class="form-control" id="exampleFormControlInput1" type="number" id="ukuran" name="ukuran">
+                            </div>        
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <select class="form-control" id="satuan" name="satuan">
+                                        @foreach ($getsatuan as $satuan)
+                                            <option value="{{$satuan->id}}">{{$satuan->satuan}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>         
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer"><button class="btn btn-secondary" type="button" data-dismiss="modal">Tutup</button><button class="btn btn-primary" type="submit">Simpan</button></div>

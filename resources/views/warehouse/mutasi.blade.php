@@ -13,30 +13,31 @@
                 <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
             </div>
             <div class="modal-body">
-                <form action="">
+                <form method="POST" action="/mutasi/input">
+                    {{ csrf_field() }}
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Kode Stok</label>
-                        <input class="form-control" id="exampleFormControlInput1" type="email" id="kodestok" name="kodestok">
+                        <input class="form-control" id="exampleFormControlInput1" type="text" id="kodestok" name="kodestok">
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Nama Barang</label>
-                        <input class="form-control" id="exampleFormControlInput1" type="email" id="kodestok" name="kodestok">
+                        <input class="form-control" id="exampleFormControlInput1" type="text" id="namabarang" name="namabarang">
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Jumlah</label>
-                        <input class="form-control" id="exampleFormControlInput1" type="number" id="kodestok" name="kodestok">
+                        <input class="form-control" id="exampleFormControlInput1" type="number" id="jumlah" name="jumlah">
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlSelect1">Status Mutasi</label><select class="form-control form-control-solid" id="exampleFormControlSelect1">
+                        <label for="exampleFormControlSelect1">Status Mutasi</label><select class="form-control form-control-solid" id="status" name="status">
                             <option>Pilih Status</option>
                             <option value="gtk">Gudang Ke Toko</option>
                             <option value="tkg">Toko Ke Gudang</option>
                         </select>
                     </div>
-                    <div class="form-group"><label for="exampleFormControlTextarea1">Keterangan</label><textarea class="form-control form-control-solid" id="exampleFormControlTextarea1" rows="3"></textarea></div>
+                    <div class="form-group"><label for="exampleFormControlTextarea1">Keterangan</label><textarea class="form-control form-control-solid" id="keterangan" name="keterangan" rows="3"></textarea></div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-secondary" type="button" data-dismiss="modal">Tutup</button><button class="btn btn-primary" type="submit">Simpan</button></div>
                 </form>
-            </div>
-            <div class="modal-footer"><button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Save changes</button></div>
         </div>
     </div>
 </div>

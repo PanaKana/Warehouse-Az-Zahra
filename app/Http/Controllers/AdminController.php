@@ -26,6 +26,7 @@ class AdminController extends Controller
                      ->get();
         // dd($datagudang);
 
+
         return view('warehouse.stockgudang')->with(compact('datagudang'));
     }
 
@@ -54,9 +55,20 @@ class AdminController extends Controller
         return view('warehouse.stock')->with(compact('dataall'));
     }
 
-    public function inputstokgudang()
+    public function inputstokgudang(Request $request)
     {
-        return view('warehouse.stockgudang');
+        $kodestok = $request->all();
+        $namabarang = $request->get('namabarang');
+        dd($kodestok);
+        // return back()->with('Input Berhasil');
+    }
+
+    public function mutasistok(Request $request)
+    {
+        $kodestok = $request->all();
+        $namabarang = $request->get('namabarang');
+        dd($kodestok);
+        // return back()->with('Input Berhasil');
     }
 
     public function inputstoktoko()
@@ -71,6 +83,8 @@ class AdminController extends Controller
 
     public function cekbarangmasuk()
     {
-        return view('warehouse.penerimaan');
+        $getsatuan = DB::table('satuan')->get();
+        
+        return view('warehouse.penerimaan')->with(compact('getsatuan'));
     }
 }
