@@ -24,7 +24,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Jumlah</label>
-                        <input class="form-control" id="exampleFormControlInput1" type="email" id="kodestok" name="kodestok">
+                        <input class="form-control" id="exampleFormControlInput1" type="number" id="kodestok" name="kodestok">
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Status Mutasi</label><select class="form-control form-control-solid" id="exampleFormControlSelect1">

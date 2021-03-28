@@ -19,15 +19,25 @@
                 <form action="">
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Kode Stok</label>
-                        <input class="form-control" id="exampleFormControlInput1" type="email" id="kodestok" name="kodestok">
+                        <input class="form-control" id="exampleFormControlInput1" type="text" id="kodestok" name="kodestok">
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Nama Barang</label>
-                        <input class="form-control" id="exampleFormControlInput1" type="email" id="kodestok" name="kodestok">
+                        <input class="form-control" id="exampleFormControlInput1" type="text" id="namabarang" name="namabarang">
                     </div>
+                    <div class="row">
+                        <div class="form-group col-md-6 col-xs-6">
+                            <label for="exampleFormControlInput1">Tanggal Expired</label><br>
+                            <input type="date" id="expired" name="expired" placeholder="Silahkan Isi Tanggal Expired">
+                        </div>
+                        <div class="form-group col-md-6 col-xs-6">
+                            <label for="exampleFormControlInput1">Jumlah Stok</label><br>
+                            <input type="Number" id="jumlah" name="jumlah" placeholder="Silahkan Isi Jumlah Stok">
+                        </div>  
+                    </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-secondary" type="button" data-dismiss="modal">Tutup</button><button class="btn btn-primary" type="submit">Simpan</button></div>
                 </form>
-            </div>
-            <div class="modal-footer"><button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Save changes</button></div>
         </div>
     </div>
 </div>
@@ -88,4 +98,13 @@
 @endsection
 
 @section('script')
+<script>
+    $(function() {
+    console.log( "ready!" );
+});
+ 
+</script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 @endsection
